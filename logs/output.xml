@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220812 12:20:36.603" rpa="false" schemaversion="3">
+<suite id="s1" name="Homescreen" source="C:\Projetos\appium_robot\tests\homescreen.robot">
+<test id="s1-t1" name="CT01 - Fechar o app" line="11">
+<kw name="Abrir aplicativo" library="base" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Odyssey</arg>
+<arg>app=${EXECDIR}/app/selendroid-test-app.apk</arg>
+<arg>udid=emulator-5554</arg>
+<arg>fullReset=false</arg>
+<arg>noReset=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220812 12:20:36.847" endtime="20220812 12:20:49.082"/>
+</kw>
+<status status="PASS" starttime="20220812 12:20:36.846" endtime="20220812 12:20:49.082"/>
+</kw>
+<kw name="Verificar se está na tela inicial do app" library="homescreen">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${locator_l10nCD}</arg>
+<arg>10</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220812 12:20:49.085" endtime="20220812 12:20:49.427"/>
+</kw>
+<status status="PASS" starttime="20220812 12:20:49.084" endtime="20220812 12:20:49.428"/>
+</kw>
+<kw name="Fechar app manualmente" library="homescreen">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${button_close}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220812 12:20:49.434" level="INFO">Clicking element 'accessibility_id=buttonTestCD'.</msg>
+<status status="PASS" starttime="20220812 12:20:49.429" endtime="20220812 12:20:49.806"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${label_message}</arg>
+<arg>10</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220812 12:20:49.807" endtime="20220812 12:20:50.540"/>
+</kw>
+<status status="PASS" starttime="20220812 12:20:49.429" endtime="20220812 12:20:50.541"/>
+</kw>
+<kw name="Confirmar fechar app" library="homescreen">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${button_1}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220812 12:20:50.546" level="INFO">Clicking element 'id=android:id/button1'.</msg>
+<status status="PASS" starttime="20220812 12:20:50.542" endtime="20220812 12:20:50.773"/>
+</kw>
+<status status="PASS" starttime="20220812 12:20:50.542" endtime="20220812 12:20:50.773"/>
+</kw>
+<kw name="Fechar aplicativo" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220812 12:20:51.825" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220812 12:20:50.775" endtime="20220812 12:20:51.826"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220812 12:20:51.827" endtime="20220812 12:20:52.623"/>
+</kw>
+<status status="PASS" starttime="20220812 12:20:50.774" endtime="20220812 12:20:52.624"/>
+</kw>
+<status status="PASS" starttime="20220812 12:20:36.845" endtime="20220812 12:20:52.624"/>
+</test>
+<test id="s1-t2" name="CT02 - Acessar tela de Web View" line="16">
+<kw name="Abrir aplicativo" library="base" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Odyssey</arg>
+<arg>app=${EXECDIR}/app/selendroid-test-app.apk</arg>
+<arg>udid=emulator-5554</arg>
+<arg>fullReset=false</arg>
+<arg>noReset=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220812 12:20:52.628" endtime="20220812 12:21:05.953"/>
+</kw>
+<status status="PASS" starttime="20220812 12:20:52.628" endtime="20220812 12:21:05.953"/>
+</kw>
+<kw name="Verificar se está na tela inicial do app" library="homescreen">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${locator_l10nCD}</arg>
+<arg>10</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220812 12:21:05.958" endtime="20220812 12:21:06.302"/>
+</kw>
+<status status="PASS" starttime="20220812 12:21:05.956" endtime="20220812 12:21:06.302"/>
+</kw>
+<kw name="Clicar no botão de elementos web" library="homescreen">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${button_webView}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220812 12:21:06.310" level="INFO">Clicking element 'accessibility_id=buttonStartWebviewCD'.</msg>
+<status status="PASS" starttime="20220812 12:21:06.307" endtime="20220812 12:21:06.723"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${button_goBack}</arg>
+<arg>10</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220812 12:21:06.723" endtime="20220812 12:21:09.809"/>
+</kw>
+<status status="PASS" starttime="20220812 12:21:06.304" endtime="20220812 12:21:09.809"/>
+</kw>
+<kw name="Fechar aplicativo" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220812 12:21:10.441" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220812 12:21:09.811" endtime="20220812 12:21:10.441"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220812 12:21:10.442" endtime="20220812 12:21:11.630"/>
+</kw>
+<status status="PASS" starttime="20220812 12:21:09.811" endtime="20220812 12:21:11.630"/>
+</kw>
+<status status="PASS" starttime="20220812 12:20:52.625" endtime="20220812 12:21:11.631"/>
+</test>
+<test id="s1-t3" name="CT03 - Acessar tela de registro" line="20">
+<kw name="Abrir aplicativo" library="base" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Odyssey</arg>
+<arg>app=${EXECDIR}/app/selendroid-test-app.apk</arg>
+<arg>udid=emulator-5554</arg>
+<arg>fullReset=false</arg>
+<arg>noReset=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220812 12:21:11.647" endtime="20220812 12:21:25.506"/>
+</kw>
+<status status="PASS" starttime="20220812 12:21:11.646" endtime="20220812 12:21:25.506"/>
+</kw>
+<kw name="Verificar se está na tela inicial do app" library="homescreen">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${locator_l10nCD}</arg>
+<arg>10</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220812 12:21:25.508" endtime="20220812 12:21:25.897"/>
+</kw>
+<status status="PASS" starttime="20220812 12:21:25.508" endtime="20220812 12:21:25.898"/>
+</kw>
+<kw name="Clicar no botão de registro do usuário" library="homescreen">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${button_registration}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220812 12:21:25.906" level="INFO">Clicking element 'accessibility_id=startUserRegistrationCD'.</msg>
+<status status="PASS" starttime="20220812 12:21:25.900" endtime="20220812 12:21:26.206"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Username</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220812 12:21:26.206" endtime="20220812 12:21:28.626"/>
+</kw>
+<status status="PASS" starttime="20220812 12:21:25.899" endtime="20220812 12:21:28.626"/>
+</kw>
+<kw name="Fechar aplicativo" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220812 12:21:29.382" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-3.png"&gt;&lt;img src="appium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220812 12:21:28.628" endtime="20220812 12:21:29.383"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220812 12:21:29.383" endtime="20220812 12:21:30.623"/>
+</kw>
+<status status="PASS" starttime="20220812 12:21:28.627" endtime="20220812 12:21:30.623"/>
+</kw>
+<status status="PASS" starttime="20220812 12:21:11.635" endtime="20220812 12:21:30.655"/>
+</test>
+<test id="s1-t4" name="CT04 - Testar campo de texto" line="24">
+<kw name="Abrir aplicativo" library="base" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Odyssey</arg>
+<arg>app=${EXECDIR}/app/selendroid-test-app.apk</arg>
+<arg>udid=emulator-5554</arg>
+<arg>fullReset=false</arg>
+<arg>noReset=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220812 12:21:30.669" endtime="20220812 12:21:44.669"/>
+</kw>
+<status status="PASS" starttime="20220812 12:21:30.661" endtime="20220812 12:21:44.669"/>
+</kw>
+<kw name="Verificar se está na tela inicial do app" library="homescreen">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${locator_l10nCD}</arg>
+<arg>10</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220812 12:21:44.674" endtime="20220812 12:21:45.065"/>
+</kw>
+<status status="PASS" starttime="20220812 12:21:44.673" endtime="20220812 12:21:45.065"/>
+</kw>
+<kw name="Preencher textbox" library="homescreen">
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${textbox}</arg>
+<arg>Este é um texto de teste automatizado</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20220812 12:21:45.076" level="INFO">Typing text 'Este é um texto de teste automatizado' into text field 'accessibility_id=my_text_fieldCD'</msg>
+<status status="PASS" starttime="20220812 12:21:45.067" endtime="20220812 12:21:45.326"/>
+</kw>
+<status status="PASS" starttime="20220812 12:21:45.067" endtime="20220812 12:21:45.326"/>
+</kw>
+<kw name="Fechar aplicativo" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220812 12:21:46.221" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-4.png"&gt;&lt;img src="appium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220812 12:21:45.328" endtime="20220812 12:21:46.221"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220812 12:21:46.222" endtime="20220812 12:21:47.417"/>
+</kw>
+<status status="PASS" starttime="20220812 12:21:45.327" endtime="20220812 12:21:47.418"/>
+</kw>
+<status status="PASS" starttime="20220812 12:21:30.658" endtime="20220812 12:21:47.419"/>
+</test>
+<test id="s1-t5" name="CT05 - Testar checkbox" line="28">
+<kw name="Abrir aplicativo" library="base" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Odyssey</arg>
+<arg>app=${EXECDIR}/app/selendroid-test-app.apk</arg>
+<arg>udid=emulator-5554</arg>
+<arg>fullReset=false</arg>
+<arg>noReset=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220812 12:21:47.429" endtime="20220812 12:22:01.422"/>
+</kw>
+<status status="PASS" starttime="20220812 12:21:47.428" endtime="20220812 12:22:01.425"/>
+</kw>
+<kw name="Verificar se está na tela inicial do app" library="homescreen">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${locator_l10nCD}</arg>
+<arg>10</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220812 12:22:01.434" endtime="20220812 12:22:01.805"/>
+</kw>
+<status status="PASS" starttime="20220812 12:22:01.432" endtime="20220812 12:22:01.805"/>
+</kw>
+<kw name="Marcar/Desmarcar caixa de seleção" library="homescreen">
+<arg>false</arg>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${checkbox_add}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220812 12:22:01.815" level="INFO">Clicking element 'id=io.selendroid.testapp:id/input_adds_check_box'.</msg>
+<status status="PASS" starttime="20220812 12:22:01.809" endtime="20220812 12:22:02.194"/>
+</kw>
+<kw name="Element Attribute Should Match" library="AppiumLibrary">
+<arg>${checkbox_add}</arg>
+<arg>checked</arg>
+<arg>${value}</arg>
+<doc>Verify that an attribute of an element matches the expected criteria.</doc>
+<msg timestamp="20220812 12:22:03.060" level="INFO">Element 'id=io.selendroid.testapp:id/input_adds_check_box' attribute 'checked' is 'false' </msg>
+<status status="PASS" starttime="20220812 12:22:02.195" endtime="20220812 12:22:03.060"/>
+</kw>
+<status status="PASS" starttime="20220812 12:22:01.807" endtime="20220812 12:22:03.060"/>
+</kw>
+<kw name="Fechar aplicativo" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220812 12:22:03.833" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-5.png"&gt;&lt;img src="appium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220812 12:22:03.064" endtime="20220812 12:22:03.835"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220812 12:22:03.835" endtime="20220812 12:22:04.889"/>
+</kw>
+<status status="PASS" starttime="20220812 12:22:03.063" endtime="20220812 12:22:04.889"/>
+</kw>
+<status status="PASS" starttime="20220812 12:21:47.426" endtime="20220812 12:22:04.890"/>
+</test>
+<test id="s1-t6" name="CT06 - Testar botões" line="32">
+<kw name="Abrir aplicativo" library="base" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Odyssey</arg>
+<arg>app=${EXECDIR}/app/selendroid-test-app.apk</arg>
+<arg>udid=emulator-5554</arg>
+<arg>fullReset=false</arg>
+<arg>noReset=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220812 12:22:04.909" endtime="20220812 12:22:20.336"/>
+</kw>
+<status status="PASS" starttime="20220812 12:22:04.907" endtime="20220812 12:22:20.341"/>
+</kw>
+<kw name="Verificar se está na tela inicial do app" library="homescreen">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${locator_l10nCD}</arg>
+<arg>10</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220812 12:22:20.365" endtime="20220812 12:22:20.677"/>
+</kw>
+<status status="PASS" starttime="20220812 12:22:20.358" endtime="20220812 12:22:20.678"/>
+</kw>
+<kw name="Clicar no botão de exibir barra de progresso" library="homescreen">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${button_showProgress}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220812 12:22:20.687" level="INFO">Clicking element 'accessibility_id=waitingButtonTestCD'.</msg>
+<status status="PASS" starttime="20220812 12:22:20.681" endtime="20220812 12:22:21.043"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>25%</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220812 12:22:21.044" endtime="20220812 12:22:24.860"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>50%</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220812 12:22:24.865" endtime="20220812 12:22:27.363"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>75%</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220812 12:22:27.364" endtime="20220812 12:22:30.908"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Username</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220812 12:22:30.909" endtime="20220812 12:22:35.175"/>
+</kw>
+<status status="PASS" starttime="20220812 12:22:20.680" endtime="20220812 12:22:35.176"/>
+</kw>
+<kw name="Clicar no botão de Voltar" library="homescreen">
+<kw name="Go Back" library="AppiumLibrary">
+<doc>Goes one step backward in the browser history.</doc>
+<status status="PASS" starttime="20220812 12:22:35.181" endtime="20220812 12:22:35.305"/>
+</kw>
+<status status="PASS" starttime="20220812 12:22:35.180" endtime="20220812 12:22:35.305"/>
+</kw>
+<kw name="Clicar no botão de Voltar" library="homescreen">
+<kw name="Go Back" library="AppiumLibrary">
+<doc>Goes one step backward in the browser history.</doc>
+<status status="PASS" starttime="20220812 12:22:35.307" endtime="20220812 12:22:36.865"/>
+</kw>
+<status status="PASS" starttime="20220812 12:22:35.306" endtime="20220812 12:22:36.865"/>
+</kw>
+<kw name="Clicar no botão de Textview" library="homescreen">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${button_displayTV}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220812 12:22:36.877" level="INFO">Clicking element 'accessibility_id=visibleButtonTestCD'.</msg>
+<status status="PASS" starttime="20220812 12:22:36.867" endtime="20220812 12:22:37.526"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Text is sometimes displayed</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220812 12:22:37.527" endtime="20220812 12:22:37.634"/>
+</kw>
+<status status="PASS" starttime="20220812 12:22:36.866" endtime="20220812 12:22:37.635"/>
+</kw>
+<kw name="Clicar no botão de Display Toast" library="homescreen">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${button_displayToast}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220812 12:22:37.642" level="INFO">Clicking element 'accessibility_id=showToastButtonCD'.</msg>
+<status status="PASS" starttime="20220812 12:22:37.636" endtime="20220812 12:22:38.170"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Hello selendroid toast!</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220812 12:22:38.171" endtime="20220812 12:22:38.771"/>
+</kw>
+<status status="PASS" starttime="20220812 12:22:37.636" endtime="20220812 12:22:38.771"/>
+</kw>
+<kw name="Clicar no botão de Display Popup Windows" library="homescreen">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${button_displayPW}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220812 12:22:38.775" level="INFO">Clicking element 'accessibility_id=showPopupWindowButtonCD'.</msg>
+<status status="PASS" starttime="20220812 12:22:38.773" endtime="20220812 12:22:38.964"/>
+</kw>
+<status status="PASS" starttime="20220812 12:22:38.772" endtime="20220812 12:22:38.964"/>
+</kw>
+<kw name="Clicar no botão de Display and Focus" library="homescreen">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${button_displayFocus}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220812 12:22:38.970" level="INFO">Clicking element 'id=io.selendroid.testapp:id/topLevelElementTest'.</msg>
+<status status="PASS" starttime="20220812 12:22:38.967" endtime="20220812 12:22:39.732"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${textview_focusedText}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220812 12:22:39.734" endtime="20220812 12:22:40.311"/>
+</kw>
+<status status="PASS" starttime="20220812 12:22:38.965" endtime="20220812 12:22:40.311"/>
+</kw>
+<kw name="Fechar aplicativo" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220812 12:22:40.867" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-6.png"&gt;&lt;img src="appium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220812 12:22:40.315" endtime="20220812 12:22:40.868"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220812 12:22:40.868" endtime="20220812 12:22:42.674"/>
+</kw>
+<status status="PASS" starttime="20220812 12:22:40.315" endtime="20220812 12:22:42.674"/>
+</kw>
+<status status="PASS" starttime="20220812 12:22:04.894" endtime="20220812 12:22:42.677"/>
+</test>
+<doc>Este documento valida os testes relacionados a tela de Add Friends do watch Odyssey</doc>
+<status status="PASS" starttime="20220812 12:20:36.605" endtime="20220812 12:22:42.715"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="Homescreen">Homescreen</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
